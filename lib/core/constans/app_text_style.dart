@@ -118,7 +118,7 @@ class AppTextStyle {
   static TextStyle h6SemiBold = GoogleFonts.inter().copyWith(
     fontSize: 16.sp,
     letterSpacing: -(16 * 0.01),
-    height: 24 / 16,
+    height: 2420 / 16,
     fontWeight: AppWeightFont.semiBold,
   );
 
@@ -126,6 +126,48 @@ class AppTextStyle {
     fontSize: 16.sp,
     letterSpacing: -(16 * 0.01),
     height: 24 / 16,
+    fontWeight: AppWeightFont.reguler,
+  );
+
+  static TextStyle h7Bold = GoogleFonts.inter().copyWith(
+    fontSize: 14.sp,
+    letterSpacing: -(14 * 0.01),
+    height: 20 / 14,
+    fontWeight: AppWeightFont.bold,
+  );
+
+  static TextStyle h7SemiBold = GoogleFonts.inter().copyWith(
+    fontSize: 14.sp,
+    letterSpacing: -(14 * 0.01),
+    height: 20 / 14,
+    fontWeight: AppWeightFont.semiBold,
+  );
+
+  static TextStyle h7Regular = GoogleFonts.inter().copyWith(
+    fontSize: 14.sp,
+    letterSpacing: -(14 * 0.01),
+    height: 20 / 14,
+    fontWeight: AppWeightFont.reguler,
+  );
+
+  static TextStyle h8Bold = GoogleFonts.inter().copyWith(
+    fontSize: 12.sp,
+    letterSpacing: -(12 * 0.01),
+    height: 16 / 12,
+    fontWeight: AppWeightFont.bold,
+  );
+
+  static TextStyle h8SemiBold = GoogleFonts.inter().copyWith(
+    fontSize: 12.sp,
+    letterSpacing: -(12 * 0.01),
+    height: 16 / 12,
+    fontWeight: AppWeightFont.semiBold,
+  );
+
+  static TextStyle h8Regular = GoogleFonts.inter().copyWith(
+    fontSize: 12.sp,
+    letterSpacing: -(12 * 0.01),
+    height: 16 / 12,
     fontWeight: AppWeightFont.reguler,
   );
 }

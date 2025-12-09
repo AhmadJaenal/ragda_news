@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'core/injection.dart';
+import 'routing/pages.dart';
+import 'theme/app_themes.dart';
+
+void main() async {
+  await initLocator();
+  await dotenv.load(fileName: ".env");
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -9,6 +18,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ScreenUtilInit(
+      designSize: Size(360, 690),
+      minTextAdapt: true,
+      builder: (context, child) {
+        return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+          initialRoute: AppPages.initial,
+          getPages: AppPages.routes,
+          theme: context.lightTheme,
+          themeMode: ThemeMode.light,
+        );
+      },
+    );
   }
 }
